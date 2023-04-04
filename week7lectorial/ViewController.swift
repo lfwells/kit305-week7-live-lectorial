@@ -26,16 +26,20 @@ class ViewController: UIViewController, CharacterSelectDelegate
         
         lblCharactersName.text = "hello"
     }
+    
+    var anIntThatMayBeNil : Int?
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("going to the screen")
-        if segue.identifier == "goToCharacterSelect"
-        {
-            print("do something specific about character select")
+        //if segue.identifier == "goToCharacterSelect"
+        //{
             
-            let otherScreen = segue.destination as! CharacterSelectScreen
-            otherScreen.delegate = self
-        }
+            if let otherScreen = segue.destination as? CharacterSelectScreen
+            {
+                print("do something specific about character select")
+                otherScreen.delegate = self
+            }
+        //}
     }
 }
 
