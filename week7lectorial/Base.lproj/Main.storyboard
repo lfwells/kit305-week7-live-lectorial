@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DTC-iC-UTy">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Menu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="week7lectorial" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlq-8L-d84">
-                                <rect key="frame" x="120.66666666666669" y="140" width="152" height="35"/>
+                                <rect key="frame" x="120.66666666666669" y="184" width="152" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Select Character"/>
                                 <connections>
@@ -25,7 +25,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Your Character" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEk-zv-Qmv">
-                                <rect key="frame" x="38.666666666666657" y="82" width="316" height="41"/>
+                                <rect key="frame" x="38.666666666666657" y="126" width="316" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -49,49 +49,63 @@
                             <constraint firstItem="qlq-8L-d84" firstAttribute="top" secondItem="YEk-zv-Qmv" secondAttribute="bottom" constant="17" id="VYK-bR-KCk"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Main Menu" id="EHB-nx-NhT">
+                        <barButtonItem key="backBarButtonItem" title="Back to Home" id="3Ze-Mt-cHe"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="lblCharactersName" destination="YEk-zv-Qmv" id="b2C-Uq-nOg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="-27"/>
+            <point key="canvasLocation" x="959.5419847328244" y="-27.464788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--Dumb-->
         <scene sceneID="FkI-8N-ZaY">
             <objects>
                 <viewController id="sCD-pb-Qot" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="igQ-V9-L0V">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="go away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GE-bl-gaM">
-                                <rect key="frame" x="153" y="89" width="63" height="21"/>
+                                <rect key="frame" x="156" y="126" width="63" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sh7-AA-y1T">
+                                <rect key="frame" x="169" y="203" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <segue destination="jpA-oD-sJY" kind="show" id="Af9-HT-f4Q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="a3I-sL-VcR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="i1v-2m-mqS"/>
+                    <navigationItem key="navigationItem" title="Dumb" id="i1v-2m-mqS">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="7jQ-yP-lNZ"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kEg-We-jHi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="776" y="-768"/>
         </scene>
-        <!--Character Select Screen-->
+        <!--Character Select-->
         <scene sceneID="nXJ-Tg-jTm">
             <objects>
                 <viewController id="jpA-oD-sJY" customClass="CharacterSelectScreen" customModule="week7lectorial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MHG-AH-6rT">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="g4Y-3K-AFd">
-                                <rect key="frame" x="16" y="76" width="361" height="34.333333333333343"/>
+                                <rect key="frame" x="16" y="119.99999999999999" width="361" height="34.333333333333329"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1b7-6M-bva">
                                         <rect key="frame" x="0.0" y="0.0" width="69" height="34.333333333333336"/>
@@ -120,7 +134,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQv-El-HtX">
-                                <rect key="frame" x="158" y="161" width="77" height="34.333333333333343"/>
+                                <rect key="frame" x="158" y="205" width="77" height="34.333333333333343"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
                                 <connections>
@@ -139,13 +153,34 @@
                             <constraint firstItem="g4Y-3K-AFd" firstAttribute="top" secondItem="zeS-vV-rDY" secondAttribute="top" constant="17" id="ynb-Of-HQe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cTp-zI-8RW"/>
+                    <navigationItem key="navigationItem" title="Character Select" id="cTp-zI-8RW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="La2-Z0-4ei" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992" y="-61"/>
+            <point key="canvasLocation" x="1918.3206106870227" y="-61.267605633802823"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oPO-hI-wk6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DTC-iC-UTy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eMJ-Uq-8bm">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4kT-72-KVL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Euo-SU-OoC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.824427480916029" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Af9-HT-f4Q"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
